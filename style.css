@@ -5,20 +5,62 @@
 }
 
 :root {
-    --primary-color: #a2ad59;
-    --secondary-color: #9b489b;
-    --border-color: #e8e9ed;
-    --bg-color: #333333;
+    --palette-color-1: #EB6D1C;
+    --palette-color-2: #F5B269;
+    --palette-color-3: #DB8B00;
+    --palette-color-4: #F5D173;
+    --palette-color-5: #E8E4D3;
 }
 
 body {
+    background-color: var(--palette-color-4);
    font-family: 'Montserrat', sans-serif;
    display: flex;
-   flex-direction: column;
    align-items: center;
    justify-content: center;
    height: 100vh;
-   overflow: hidden;
    margin: 0;
 }
 
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.carousel {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    height: 530px;
+    width: 500px;
+    overflow: hidden;
+    border: 2px solid var(--palette-color-1);
+}
+
+.image-container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: var(--palette-color-1);
+    color: var(--palette-color-5);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 49.5%;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {
+    outline: none;
+}
